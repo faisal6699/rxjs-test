@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --brand-color: #029CA4;
+  --second-color: #4c4c4c;
+}
+
+body {
+  font-family: Ubuntu, sans-serif;
+}
+
+.margin-right {
+  margin-right: 5px;
+}

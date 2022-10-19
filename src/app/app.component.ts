@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rxjs-test';
+  colors: string[] = ['red', 'green', 'black', 'blue'];
 }

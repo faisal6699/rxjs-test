@@ -1,0 +1,15 @@
+.item {
+  border: 1px solid var(--brand-color);
+  padding: 10px;
+  border-radius: 5px;
+  button {
+    padding: 10px;
+    color: var(--second-color);
+    cursor: pointer;
+    border: 1px solid var(--brand-color);
+    border-radius: 5px;
+  }
+  button:hover {
+    color: var(--brand-color);
+  }
+}

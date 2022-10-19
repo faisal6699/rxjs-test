@@ -1,0 +1,32 @@
+.main {
+  height: calc(100vh - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--brand-color);
+  .add-task {
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid var(--brand-color);
+      border-radius: 5px 0 0 5px;
+      color: var(--brand-color);
+    }
+    input:focus-visible {
+      outline: none;
+    }
+    button {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid var(--brand-color);
+      border-radius: 0 5px 5px 0;
+      color: var(--second-color);
+      cursor: pointer;
+    }
+    button:hover {
+      color: var(--brand-color);
+    }
+
+  }
+}
