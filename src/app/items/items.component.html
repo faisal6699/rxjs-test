@@ -1,6 +1,7 @@
 <div class="item">
-  <p>this is the item</p>
-  <button class="margin-right">Move To Completed</button>
-  <button class="margin-right">Move To Cleared</button>
-  <button class="margin-right">Remove it</button>
+  <p>{{value}}</p>
+  <button class="margin-right" *ngIf="name==='pending'" (click)="moveItemToCompletedFromPending()">Move To Completed</button>
+  <button class="margin-right" *ngIf="name==='pending'" (click)="moveItemToClearedFromPending()">Move To Cleared</button>
+  <button class="margin-right" *ngIf="name==='completed'" (click)="moveItemToClearedFromCompleted()">Move To Cleared</button>
+  <button class="margin-right" *ngIf="name==='cleared'" (click)="removeItem()">Remove it</button>
 </div>

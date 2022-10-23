@@ -2,20 +2,26 @@
   <div class="main-block">
     <h1>To Do App</h1>
     <div class="add-task">
-      <input type="text" placeholder="add a new task" id="bg-change">
-      <button>Add Task</button>
+      <input type="text" placeholder="add a new task" [(ngModel)]="tasks" id="bg-change">
+      <button (click)="addToPending()">Add Task</button>
     </div>
-    <div>
+    <div *ngIf="pendingTasks.length">
       <h3>Pending Tasks</h3>
-      <app-items></app-items>
+      <ng-container *ngFor="let pending of pendingTasks">
+        <app-items [name]="'pending'" [value]="pending"></app-items>
+      </ng-container>
     </div>
-    <div>
+    <div *ngIf="completedTasks.length">
       <h3>Completed Tasks</h3>
-      <app-items></app-items>
+      <ng-container *ngFor="let completed of completedTasks">
+        <app-items [name]="'completed'" [value]="completed"></app-items>
+      </ng-container>
     </div>
-    <div>
+    <div *ngIf="clearedTasks.length">
       <h3>Cleared Tasks</h3>
-      <app-items></app-items>
+      <ng-container *ngFor="let cleared of clearedTasks">
+        <app-items [name]="'cleared'" [value]="cleared"></app-items>
+      </ng-container>
     </div>
   </div>
 </div>
